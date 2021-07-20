@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const Crearusuario = new Schema({
+const Usuario = new Schema({
     nombre:String,
     apellido:String,
     rut: { type:String,default: null },
@@ -9,9 +9,4 @@ const Crearusuario = new Schema({
     password: String,
 });
 
-// preguntar por obtener usuarios 
-const Obtenerusuario = new Schema({
-    usuario: { Crearusuario }
-});
-
-module.exports = mongoose.model('Crearusuario',Crearusuario, 'Obtenerusuario',Obtenerusuario);
+module.exports = mongoose.model('Usuario',Usuario);
